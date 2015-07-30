@@ -1,0 +1,128 @@
+<% if Rails.env.development? %>
+  <script type="text/javascript" src="https://js.stripe.com/v2/stripe-debug.js"></script>
+<% else %>
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<% end %>
+    
+<div class="checkout-bg">
+  <div class= "container-fluid checkout-width">
+    <div class="checkout_block">
+      <div class="sidebar_checkout">
+      	<div class="sidebar_checkout-payment" style="padding: 10px">
+	        <h2 style="padding: 0px; font-size: 18px">Landscaping Appointment</h2>
+	        <table class="payment-table">
+	          <tr id="subtotal" >
+	            <td >
+	              <p >Subtotal</p>
+	            </td>
+	            <td><p id="subtotal">$40</p></td>
+	          </tr>
+
+	          
+	          <tr>
+	            
+	            <td ><p><strong>Total</strong></p></td>
+	            <td><p id="total"><strong>$40</strong></p></td>
+	          </tr>
+	        </table>
+        </div>
+        <br/>
+       	<div class="faq">
+       		<h2 class="faq-h2">FAQ</h2>
+       			<p class="faq-text">What is your cancellation policy?</p>
+            <p class="faq-subtext">Cancel anytime 24 hours prior to your appointment.  Cancellations after the 24 hour period will be assessed a $15 fee.</p>
+            <p class="faq-text">Who will service my lawn?</p>              
+            <p class="faq-subtext">We have a large network of landscaping professionals.  Each professional is required to keep minimm ratings in our system so although we can't ensure which lawn care professional will stop by, we can ensure premium service.</p>
+            <p class="faq-text">I have a few more questions.</p>
+            <p class="faq-subtext">Feel free to give us a call at (480) 418-5296</p>
+       		</ul>
+
+       	</div> 
+      </div>
+      <div class="main_content_checkout">
+        <%= form_for @appointment do |f| %>
+
+          <h2 style="padding: 0px; font-size: 30px">Complete Your Booking</h2>
+            
+            <%= f.hidden_field( :amount, class: "payment_input width-3" )%>
+          <p class="field" %>
+              <label class="payment_label">Email</label>
+              <%= f.text_field( :email, class: "payment_input width-3" )%>
+          </p>
+          
+          <p class="field" %>
+            <label class="payment_label">Appointment Date</label>
+            <%= f.date_field( :appointment_date, class: "payment_input width-3", id: "date" )%>
+          </p> 
+
+          <div class="section-line"></div>
+
+          <h2>Address</h2>         
+          <div class="customer-section">
+         
+            <div class="payment_float">
+              <p class="field" %>
+                <label class="payment_label">Address</label>
+                <%= f.text_field(:address_line_1, class: "payment_input width-2 ") %>
+              </p>
+            </div>
+              <p class="field" %>
+                <label class="payment_label">Suite/APT</label>
+                <%= f.text_field(:address_line_2, class: "payment_input width-4 ") %>
+              </p>
+
+            <div class="payment_float">
+              <p class="field" %>
+                <label class="payment_label">City</label>
+                <%= f.text_field(:city, class: "payment_input width-4") %>
+              </p>
+            </div>
+            <div>
+              <p class="field" %>
+                <label class="payment_label">State</label>
+                <%= f.text_field(:state, class: "payment_input width-4 ") %>
+              </p>
+            </div>
+
+              <p class="field" %>
+                <label class="payment_label">Phone Number</label>
+                <%= f.text_field(:phone_number, class: "payment_input width-2 ") %>
+              </p>
+            </div>
+
+
+           <p class="field">
+              <%= f.hidden_field(:coupon_code, class: "payment_input width-2", id: "coupon_code") %>
+            </p>
+
+          </br>
+          <h2 style="padding: 0px; font-size: 30px">Billing Info</h2>
+          <div class="section-line" id="billing">
+             <p class="field" data-hook="card_number">
+             	<img src="/images/credit_card.png" style="width:100%">
+                <div class="payment_label">Card Number</div>
+                <% options_hash = Rails.env.production? ? {:autocomplete => 'off'} : {} %>
+                <%= text_field_tag "card_number", '', options_hash.merge(:id => 'card_number', :class => 'required cardNumber payment_input width-3', :size => 19, :maxlength => 19, :autocomplete => "off") %>
+              </p>
+              <div class="payment_float">
+                  <div class="payment_label">Card Expiration</div>
+                  <span><%= text_field_tag "card_expiry_month", '', :id => 'card_expiry_month', :class => "required cardExpiryMonth payment_input width-4", :placeholder => "MM", maxlength: 2 %></span>
+	              <span><%= text_field_tag "card_expiry_year", '', :id => 'card_expiry_year', :class => "required cardExpiryYear payment_input width-4", :placeholder => "YY", maxlength: 2 %></span>
+              </div>
+              <p class="field" data-hook="card_code">
+                <div class="payment_label">Card Code</div>
+                <%= text_field_tag "card_code", '', options_hash.merge(:id => 'card_code', :class => 'required cardCode payment_input', :size => 5) %>
+              </p>
+           </div><br/>
+
+          <%= f.submit "Place Appointment", class: 'continue' %>
+          <p>*You'll be billed on the day of your appointment.  Cancel anytime.</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+    <script>stripePaymentMethod = $('#billing')</script>
+    <script type="text/javascript">
+      Stripe.setPublishableKey('pk_test_Fi31dPqZ9H6ZVLIfUD8mjD4j');
+    </script>

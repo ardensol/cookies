@@ -1,0 +1,5 @@
+<%= form_for @appointment do |f| %>
+
+  <%= f.text_field(:zip, class: "home_field", placeholder: "Enter your Zip Code", maxlength: 5)%><br/>    
+  <%= f.submit "Schedule Lawn Care", class: 'get_started' %>
+<% end %>
