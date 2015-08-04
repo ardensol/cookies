@@ -1,6 +1,6 @@
 class Appointment < ActiveRecord::Base
 
-  attr_accessor :card_token, :amount
+  attr_accessor :card_token, :amount, :appointment_frequency
 
   def find_or_create_stripe_customer(appointment_params)
     

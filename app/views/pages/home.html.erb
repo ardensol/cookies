@@ -1,17 +1,29 @@
 <link rel="stylesheet" id="fonts_style-css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" type="text/css" media="all">
 <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 
-<div class="example-first_section">
+<div class="homeBanner cf">
+	<img alt="" src="images/maid_scottsdale_cleaning.jpg" class="fullBanner">
 	<div class="example-top_section">
-		<h1>BOOK A TRUSTED LANDSCAPING PROFESSIONAL</h1>
-		<h2>Just Pick a Day and We'll do the Rest. Don't wade through dozens of quotes.<br/>  Get professional & quick service, today!</h2>
-		
-		<%= render 'appointments/new' %>
-		<br/>
+		<div class="bannerDetail">
+			<div class="bannerConn" id="form">
+				<h1>BOOK A CLEANING IN 60 SECONDS</h1>
+				<p>Arizona's Premier Cleaning Service.</p>
+				<ul class="checkMarck cf">
+	          		<li class="width60"><span></span>Easy &amp; secure online booking</li>
+	                <li><span></span>Up-front flat rate pricing</li>
+	                <li class="width60"><span></span>We provide supplies and equipment</li>
+	                <li><span></span>Insured  cleaners</li>
+	            </ul>
+	        </div>
+			
+			<%= render 'appointments/new' %>
+			
+		</div>
 		<!-- <div class="example-home_width">
 			<a href="/appointments/new"><span>Schedule Lawn Care</span></a>
 		</div> -->
-
+		<div class="bannerBg"></div>
+		<a href="javascript:void(0);" class="scrollIcon"></a>
 	</div>
 </div>
 
@@ -26,14 +38,15 @@
 
 <div class="example-third_section" id="how">
 	<div class="fluid-container">
-		<h2>Spend your time doing things you love. We'll take care of the lawn!</h2>
-		<div class="example-steps">
+		<h2>How it Works</h2>
+		<p class="sub-info">Spend your time doing things you love.  We'll take care of the house!</p>
+		<!-- <div class="example-steps">
 			<div class="col-md-4">
 				<div class="step-img">
 					<i class="fa fa-calendar-check-o fa-4x"></i>
 				</div>
 				<h4>Book</h4>
-				<p>Book your recurring or one-time lawn mowing or yard work service online with instant confirmation</p>
+				<p>Book your recurring or one-time maid service online with instant confirmation</p>
 			</div>
 			<div class="col-md-4">
 				<div class="step-img">
@@ -49,47 +62,186 @@
 				<h4>Relax</h4>
 				<p>Relax and enjoy your beautifully landscaped lawn and be the envy of the neighborhood.</p>
 			</div>
+		</div> -->
+		<div class="container-fluid">
+			<div class= "row">
+				<div class= "col-md-4 col-sm-4">
+					<div class="holder">
+						<div class="img_holder">
+							<img src="/images/computer.jpg">
+						</div>
+						<div class="inner_holder">
+							<div class="icon_holder">
+								<img src="/images/mouse_icon.png">
+							</div>
+							<h3>Book Online in 90 Seconds Now</h3>
+								Select the date and time of cleaning, click the booking button.						
+						</div>
+					</div>
+				</div>
+
+				<div class= "col-md-4 col-sm-4">
+					<div class="holder">
+						<div class="img_holder">
+							<img src="/images/cleaning.jpg">
+						</div>
+						<div class="inner_holder">
+							<div class="icon_holder">
+								<img src="/images/bubble_icon.png">
+							</div>
+							<h3>Book Online in 90 Seconds Now</h3>
+								Select the date and time of cleaning, click the booking button.						
+						</div>
+					</div>
+				</div>
+
+				<div class= "col-md-4 col-sm-4">
+					<div class="holder">
+						<div class="img_holder">
+							<img src="/images/relaxing.jpg">
+						</div>
+						<div class="inner_holder">
+							<div class="icon_holder">
+								<img src="/images/coffee_icon.png">
+							</div>
+							<h3>Book Online in 90 Seconds Now</h3>
+								Select the date and time of cleaning, click the booking button.						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="book_button">
+			<p>Ready to Book Your Maid Service?</p>
+			<center>
+				<a class="btn btn-blue" href="#form">Book Now</a>
+			</center>
 		</div>
 	</div>
 </div>
 
-<div class="example-fourth_section">
-	<div class="fluid-container">
-		<p>This week <strong>5% From your purchase</strong> goes to a local Phoenix Charity<br>
-		Kids are Noble®</p>
+<div class="third-boxes">
+	<div class="container-fluid">
+		
+	</div>
+	
+
+
+</div>
+
+
+<div id="benefits">
+	<div class="benefits_description">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<center>
+						<h1>WHY CHOOSE SCOTTSDALE MAIDS?</h1>
+					</center>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div class="example-fifth_section">
-	<div class="container-fluid">
-		<div class="col-md-3"></div>
-			<div class="col-md-6">
-					<h3>Our Professionals</h3>
-					<ul>
-		                <li>
-		          Background and reference checked        </li>
-		                <li>
-		          Consistently high customer rating        </li>
-		                <li>
-		          Passed practical lawn care exam        </li>
-		                <li>
-		          Fully Insured teams        </li>
-		                <li>
-		          Reliable and trustworthy        </li>
-		                <li>
-		          No waiting, no quotes, no phone calls.  Confirmed Immediately.        </li>
-		              </ul>
+<div class="benefits_6_boxes">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="holder">
+						<div class="six_inner_holder">
+							<div class="bb_icon_holder"><img src="/images/shield.jpg"></div>
+							<h3>Your security and privacy is our highest priority.</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="holder">
+						<div class="six_inner_holder">
+							<div class="bb_icon_holder"><img src="/images/thumbs.jpg"></div>
+							<h3>Flat rate pricing with no contracts or hidden fees.</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="holder">
+						<div class="six_inner_holder">
+							<div class="bb_icon_holder"><img src="/images/clock.jpg"></div>
+							<h3>It’s convenient and saves you a lot time in the end.</h3>
+						</div>
+					</div>
+				</div>
 			</div>
-		<div class="col-md-3"></div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="holder">
+						<div class="six_inner_holder">
+							<div class="bb_icon_holder"><img src="/images/leaf.jpg"></div>
+							<h3>Environmentally friendly cleaning products.</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="holder">
+						<div class="six_inner_holder">
+							<div class="bb_icon_holder"><img src="/images/card.jpg"></div>
+							<h3>No cash hassles. Secure online payment instead.</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="holder">
+						<div class="six_inner_holder">
+							<div class="bb_icon_holder"><img src="/images/check.jpg"></div>
+							<h3>200% Money Back Satisfaction Guaranteed.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
+
+<div class="button-minor">
+	<center>
+		<a class="btn btn-blue" href="#form">Book Now</a>
+	</center>
+</div>
+
+<div class="testimonials">
+	<div class="fluid-container">
+		<h2>Customer Testimonials</h2>
+
+		<p>I needed maid service last minute as my family decided they were going to stop by for the weekend. My place was a mess! They were able to arrange two cleaners for me in less than 24 hours and they did such a good job that my parents were in shock that I kept my place so clean. Let's keep the secret between us!
+			<div class="customerName">Charles A.
+				<span><img src="images/5star.png"></span>
+			</div>
+		</p>
+
+	</div>
+</div>
+<div class="logo-stuff">
+	<div class="wrapper">
+		<ul>
+			<li><img src="/images/yelp.png"></li>
+			<li><img src="/images/foursquare.png"></li>
+			<li><img src="/images/google-plus.png"></li>
+			<li><img src="/images/thumbtack.png"></li>
+		</ul>
+	</div>
+
+</div>
+
 
 <div class="example-sixth_section">
 	<div class="container-fluid" style="padding-bottom: 20px;">
 		<div>
 			<h3>200% Happiness Guaranteed</h3>
-			<p>If you’re not happy with your service we will be back to fix it for free!</br> &nbsp;If you’re still not happy, we offer a full refund. The strongest guarantee in the business.</p>
+			<p>If you’re not happy with your service we will be back to fix it for free!</br> &nbsp;If you’re still not happy, we offer a full refund. The strongest guarantee in the business.
+			</p>
+			
 		</div>
+
 	</div>
 </div>
 
@@ -145,7 +297,6 @@
 		<div class="col-md-2"></div>
 	</div>
 </div>
-
 <div class="example-footer">
 	<div class="container-fluid">
 		<div class="short-border">
