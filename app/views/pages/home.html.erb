@@ -1,11 +1,11 @@
 <link rel="stylesheet" id="fonts_style-css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" type="text/css" media="all">
 <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 
-<div class="homeBanner cf">
+<div class="homeBanner cf"  id="form">
 	<img alt="" src="images/maid_scottsdale_cleaning.jpg" class="fullBanner">
 	<div class="example-top_section">
-		<div class="bannerDetail">
-			<div class="bannerConn" id="form">
+		<div class="bannerDetail hidden-sm hidden-xs">
+			<div class="bannerConn">
 				<h1>BOOK A CLEANING IN 60 SECONDS</h1>
 				<p>Arizona's Premier Cleaning Service.</p>
 				<ul class="checkMarck cf">
@@ -22,8 +22,22 @@
 		<!-- <div class="example-home_width">
 			<a href="/appointments/new"><span>Schedule Lawn Care</span></a>
 		</div> -->
-		<div class="bannerBg"></div>
-		<a href="javascript:void(0);" class="scrollIcon"></a>
+		<div class="bannerBg hidden-sm hidden-xs"></div>
+	</div>
+	<div class="bannerConn hidden-md hidden-lg">
+		<center>
+			<h1>BOOK A CLEANING IN 60 SECONDS</h1>
+			<p>Arizona's Premier Cleaning Service.</p>
+			<ul class="checkMarck cf">
+	      		<li class="width60"><span></span>Easy &amp; secure online booking</li>
+	            <li><span></span>Up-front flat rate pricing</li>
+	            <li class="width60"><span></span>We provide supplies and equipment</li>
+	            <li><span></span>Insured  cleaners</li>
+	        </ul>
+
+	        <%= render 'appointments/new' %>
+	        <br/>
+    	</center>
 	</div>
 </div>
 
