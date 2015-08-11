@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   get '/appointments/:id/finalize', to: 'appointments#finalize', as: 'finalize'
   get '/confirmation', to: 'pages#confirmation'
-
+  get '/privacy', to: 'pages#privacy'
+  get '/terms-of-service', to: 'pages#termsofservice'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

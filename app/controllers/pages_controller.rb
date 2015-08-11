@@ -7,4 +7,10 @@ class PagesController < ApplicationController
 	def confirmation
 	end
 
+	def privacypolicy
+	end
+
+	def termsofservice
+	end
+
 end

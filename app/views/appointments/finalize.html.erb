@@ -74,11 +74,13 @@
               <%= f.radio_button( :appointment_frequency, "monthly")%>
               <%= f.label( :appointment_frequency_monthly, "Monthly")%>
               
+
+              <%= f.radio_button( :appointment_frequency, "biweekly")%>
+              <%= f.label( :appointment_frequency_biweekly, "Bi-Weekly")%>
+              
               <%= f.radio_button( :appointment_frequency, "weekly")%>
               <%= f.label( :appointment_frequency_weekly, "Weekly")%>
               
-              <%= f.radio_button( :appointment_frequency, "biweekly")%>
-              <%= f.label( :appointment_frequency_biweekly, "Bi-Weekly")%>
             </div>
             <br/>
           </p> 
@@ -157,6 +159,14 @@
     var preAdjustmentTotal = $('#apartment option:selected').val();
 
     $('#appointment_appointment_type').change(function() {
+      calculate()
+    });
+
+    $('.radio-buttons').change(function() {
+      calculate()
+    });
+
+    function calculate() {
       var appointment_type = $('#appointment_appointment_type option:selected').val();
       var frequency = $('.radio-buttons :checked').val()
 
@@ -165,9 +175,9 @@
       } else if (frequency === 'monthly') {
         multiple = 0.9
       } else if (frequency === 'biweekly') {
-        multiple = 0.8
+        multiple = 0.85
       } else if (frequency === 'weekly') {
-        multiple = 0.75 }
+        multiple = 0.8 }
 
       var discounted_amount = appointment_type * multiple 
       var discounted_amount = Math.floor(discounted_amount*100)/100
@@ -178,8 +188,7 @@
 
       
         $('<tr><td><p>Subtotal</p></td><td><p>$' + discounted_amount + '</p></tr><tr><td ><p><strong>Total</strong></p></td><td><p><strong>$' + discounted_amount +'</strong></p></td></tr>').appendTo('.payment-table');
-      
-    });
+      };
   </script>
 
 
