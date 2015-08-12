@@ -210,7 +210,7 @@
       </div>
     </div>
   </div>
-</div>
+</div><br/>
 
     <script>
     var preAdjustmentTotal = $('#apartment option:selected').val();
@@ -281,6 +281,10 @@
 
 
     <script>stripePaymentMethod = $('#billing')</script>
-    <script type="text/javascript">
-      Stripe.setPublishableKey('pk_test_Fi31dPqZ9H6ZVLIfUD8mjD4j');
-    </script>
+
+
+    <% if Rails.env.development? %>
+      <script type="text/javascript">Stripe.setPublishableKey('pk_test_Fi31dPqZ9H6ZVLIfUD8mjD4j');</script>
+    <% else %>
+      <script type="text/javascript">Stripe.setPublishableKey('pk_live_m8xwDf5bWjQ12Cv6mlNHQEUV');</script>
+    <% end %>
