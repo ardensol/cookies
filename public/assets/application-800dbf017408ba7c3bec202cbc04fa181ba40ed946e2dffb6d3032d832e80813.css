@@ -1,4 +1,68 @@
+@font-face {
+  font-family: 'proxima_novalight';
+  src: url(/assets/ProximaNova-Light-webfont-f40c55ba2219f475cdc120a6d01605f9d874328ee659889c70375d465c6edebf.eot);
+  src: url(/assets/ProximaNova-Light-webfont-f40c55ba2219f475cdc120a6d01605f9d874328ee659889c70375d465c6edebf.eot?#iefix) format("embedded-opentype"), url(/assets/ProximaNova-Light-webfont-818b38e3ef918cfc65669c4747bd05568192332a698e7c0c93a5dc4eb532b487.woff2) format("woff2"), url(/ProximaNova-Light-webfont.woff) format("woff"), url(/assets/ProximaNova-Light-webfont-c73605c740e3c2d15724ee87fe3cd613874b893f18cee0f89ffd0172ab63948f.ttf) format("truetype"), url(/ProximaNova-Light-webfont.svg#a_novalight) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_novalight_italic';
+  src: url(/assets/ProximaNova-LightItalic-webfont-2069a1e5d80ade0307711ed4cda915c1de245b8732a4e716702848f6e011df5f.eot);
+  src: url(/assets/ProximaNova-LightItalic-webfont-2069a1e5d80ade0307711ed4cda915c1de245b8732a4e716702848f6e011df5f.eot?#iefix) format("embedded-opentype"), url(/assets/ProximaNova-LightItalic-webfont-3754646313bfaf0372f4613098461af71eb12d34f7a66b494bbe52caabd87617.woff2) format("woff2"), url(/ProximaNova-LightItalic-webfont.woff) format("woff"), url(/ProximaNova-LightItalic-webfont.ttf) format("truetype"), url(/ProximaNova-LightItalic-webfont.svg#a_novalight_italic) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url(/assets/ProximaNova-Regular-webfont-9fb8259e4079077f6d733039b70f6c8366671941fc9171c6ccdfb3ee4c33d60e.eot);
+  src: url(/assets/ProximaNova-Regular-webfont-9fb8259e4079077f6d733039b70f6c8366671941fc9171c6ccdfb3ee4c33d60e.eot?#iefix) format("embedded-opentype"), url(/assets/ProximaNova-Regular-webfont-d6411c2b1b65ace0841f6a7eaa552c683a20ef95eb0ca35a723af3d324526c74.woff2) format("woff2"), url(/assets/ProximaNova-Regular-webfont-456f1430a733479720aeaa35009d78d5f3ccf9e4e7b01d7e343488777132c86a.woff) format("woff"), url(/assets/ProximaNova-Regular-webfont-a22d2e6294600927b56f7b3568d1307ac452b179c742ed29b6b9be5737744f50.ttf) format("truetype"), url(/ProximaNova-Regular-webfont.svg#a_nova_rgregular) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url(/assets/ProximaNova-Bold-webfont-3e66c9575ced0f5fa92fd7206c436b79369a403714ff04896ee60443682c6712.eot);
+  src: url(/assets/ProximaNova-Bold-webfont-3e66c9575ced0f5fa92fd7206c436b79369a403714ff04896ee60443682c6712.eot?#iefix) format("embedded-opentype"), url(/assets/ProximaNova-Bold-webfont-7149d7df1970ceb81e58fd38f2e7512df17ef3f6d5ea370d69c75ae1057e4a23.woff2) format("woff2"), url(/ProximaNova-Bold-webfont.woff) format("woff"), url(/ProximaNova-Bold-webfont.ttf) format("truetype"), url(/ProximaNova-Bold-webfont.svg#a_nova_rgbold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima_nova_condensedSBd';
+  src: url(/assets/ProximaNovaCond-Semibold-webfont-bdc6fdb7ac41a8a8f02350eb71708f398ad663714bc2917c2b4ba457a577b767.eot);
+  src: url(/assets/ProximaNovaCond-Semibold-webfont-bdc6fdb7ac41a8a8f02350eb71708f398ad663714bc2917c2b4ba457a577b767.eot?#iefix) format("embedded-opentype"), url(/assets/ProximaNovaCond-Semibold-webfont-46cbbe333027082cc01537400ea63eb6b3171cabfaa272f15fb9e1598a1c3aff.woff2) format("woff2"), url(/ProximaNovaCond-Semibold-webfont.woff) format("woff"), url(/ProximaNovaCond-Semibold-webfont.ttf) format("truetype"), url(/ProximaNovaCond-Semibold-webfont.svg#a_nova_condensedSBd) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latobold';
+  src: url(/assets/Lato-Bold-webfont-4e1c023688a173439dfbd1d2e414010d5af4c85d3541c477e570c1d60be1e9cc.eot);
+  src: url(/assets/Lato-Bold-webfont-4e1c023688a173439dfbd1d2e414010d5af4c85d3541c477e570c1d60be1e9cc.eot?#iefix) format("embedded-opentype"), url(/assets/Lato-Bold-webfont-74e50982602d08efec6278c3f2781c4f8789980949d152c203394ae4d5268a46.woff2) format("woff2"), url(/Lato-Bold-webfont.woff) format("woff"), url(/Lato-Bold-webfont.ttf) format("truetype"), url(/Lato-Bold-webfont.svg#latobold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latolight';
+  src: url(/assets/Lato-Light-webfont-64f0b0d7ed73ee7879a2dc0da916d1982f77730bab971b772cb15d9eedd97105.eot);
+  src: url(/assets/Lato-Light-webfont-64f0b0d7ed73ee7879a2dc0da916d1982f77730bab971b772cb15d9eedd97105.eot?#iefix) format("embedded-opentype"), url(/Lato-Light-webfont.woff2) format("woff2"), url(/Lato-Light-webfont.woff) format("woff"), url(/Lato-Light-webfont.ttf) format("truetype"), url(/Lato-Light-webfont.svg#latolight) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latoregular';
+  src: url(/assets/Lato-Regular-webfont-0d51b7fb3365dc5a875a75ab995b1c1decd05397ba3348c5eb95a98c1a436e4b.eot);
+  src: url(/assets/Lato-Regular-webfont-0d51b7fb3365dc5a875a75ab995b1c1decd05397ba3348c5eb95a98c1a436e4b.eot?#iefix) format("embedded-opentype"), url(/assets/Lato-Regular-webfont-bed0685b831242b8ef1b363491d940769cd5366913a765cee17a76e4b041de3a.woff2) format("woff2"), url(/Lato-Regular-webfont.woff) format("woff"), url(/Lato-Regular-webfont.ttf) format("truetype"), url(/Lato-Regular-webfont.svg#latoregular) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bebas_neueregular';
+  src: url(/assets/BebasNeuewebfont-webfont-45147ddf463a9d5ecc7153f0db0aeaeb4a8d2b148ea791fe18a71344e8a6a273.eot);
+  src: url(/assets/BebasNeuewebfont-webfont-45147ddf463a9d5ecc7153f0db0aeaeb4a8d2b148ea791fe18a71344e8a6a273.eot?#iefix) format("embedded-opentype"), url(/BebasNeuewebfont-webfont.woff2) format("woff2"), url(/BebasNeuewebfont-webfont.woff) format("woff"), url(/BebasNeuewebfont-webfont.ttf) format("truetype"), url(/BebasNeuewebfont-webfont.svg#bebas_neueregular) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Generic Styling */
+
 
 body {
   font-family: 'proxima_novalight', Arial, Helvetica, sans-serif;
@@ -1094,3 +1158,19 @@ li {
   padding-top: 40px;
   margin-bottom: 150px;
 }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
