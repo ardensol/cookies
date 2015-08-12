@@ -28,13 +28,17 @@
         </div>
         <br/>
        	<div class="faq hidden-sm hidden-md hidden-xs">
-       		<h2 class="faq-h2">FAQ</h2>
-       			<p class="faq-text">What is your cancellation policy?</p>
-            <p class="faq-subtext">Cancel anytime 24 hours prior to your appointment.  Cancellations after the 24 hour period will be assessed a $15 fee.</p>
-            <p class="faq-text">Who will service my lawn?</p>              
-            <p class="faq-subtext">We have a large network of landscaping professionals.  Each professional is required to keep minimm ratings in our system so although we can't ensure which lawn care professional will stop by, we can ensure premium service.</p>
-            <p class="faq-text">I have a few more questions.</p>
-            <p class="faq-subtext">Feel free to give us a call at (480) 418-5296</p>
+       		<h2 class="faq-h2">About Us</h2>
+       			<p class="faq-text">Friendly Service</p>
+            <p class="faq-subtext">Fast and friendly customer service. We will get back to your emails and phone calls within an hour during normal business timings.</p>
+            <p class="faq-text">We Provide Supplies</p>              
+            <p class="faq-subtext">No vacuum? Ran out of windex? No problem! Our cleaners provide cleaning equipment and supplies</p>
+            <p class="faq-text">Safe Shopping</p>
+            <p class="faq-subtext">Industry leading 256-bit SSL encryption. Our security practices are monitored and verified</p>
+            <p class="faq-text">Insured</p>
+            <p class="faq-subtext">You are in good hands with our Super Maids. Rest assured that we are fully insured.</p>
+            <p class="faq-text">5 Star Customer Rated</p>
+            <p class="faq-subtext">Arizona’s top rated cleaning service for a reason!</p>
        		</ul>
 
        	</div> 
@@ -58,31 +62,84 @@
           <h2>Choose Your Service</h2>
           <p class="field" %>
             <label class="payment_label">Tell us About Your Home</label></p> 
-            <%= f.select( :appointment_type, options_for_select([["Studio: $119", 119], ["One Bedroom: $129", 129], ["Two Bedroom: $139", 139], ["Three Bedroom: $159", 159],["Four Bedroom: $189", 189], ["Five Bedroom: $219", 219], ["Six Bedroom: $249", 249]]),class: "payment_input width-3 select_option", id: "apartment" )%>
+            <%= f.select( :appointment_type, options_for_select([["Studio: $119", 1], ["One Bedroom: $129", 129], ["Two Bedroom: $139", 139], ["Three Bedroom: $159", 159],["Four Bedroom: $189", 189], ["Five Bedroom: $219", 219], ["Six Bedroom: $249", 249]]),class: "payment_input width-3 select_option", id: "apartment" )%>
           
 
           <div class="section-line"></div>
           <h2>How Often?</h2>
           <p class="field" %>
             <label class="payment_label">Cancel or Reschedule Anytime!  The More Frequent Your Cleanings the Deeper the Discount we can offer!</label>
+            <div class="container-fluid">
+              <div class="radio-buttons">
+                <%= f.radio_button( :appointment_frequency, "onetime", checked: true)%>
+                <%= f.label( :appointment_frequency_onetime, "One Time")%>
 
-            <div class="radio-buttons">
-              <%= f.radio_button( :appointment_frequency, "onetime", checked: true)%>
-              <%= f.label( :appointment_frequency_onetime, "One Time")%>
 
+                <%= f.radio_button( :appointment_frequency, "monthly")%>
+                <%= f.label( :appointment_frequency_monthly, "Monthly")%>
+                
 
-              <%= f.radio_button( :appointment_frequency, "monthly")%>
-              <%= f.label( :appointment_frequency_monthly, "Monthly")%>
-              
+                <%= f.radio_button( :appointment_frequency, "biweekly")%>
+                <%= f.label( :appointment_frequency_biweekly, "Bi-Weekly")%>
 
-              <%= f.radio_button( :appointment_frequency, "biweekly")%>
-              <%= f.label( :appointment_frequency_biweekly, "Bi-Weekly")%>
-              
-              <%= f.radio_button( :appointment_frequency, "weekly")%>
-              <%= f.label( :appointment_frequency_weekly, "Weekly")%>
-              
+                <%= f.radio_button( :appointment_frequency, "weekly")%>
+                <%= f.label( :appointment_frequency_weekly, "Weekly")%>
+                
+              </div>
             </div>
-            <br/>
+          <div class="section-line"></div>
+          <h2>Extras?</h2>
+          <p class="field" %>
+            <label class="payment_label">Add extra services</label>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="extra-option col-sm-3 col-xs-4">
+                  <div class="extra-icon deep-cleaning"></div>
+                  <center>
+                  <%= f.label(:deep_clean) %>
+                  <%= f.check_box(:deep_clean) %>
+                  </center>
+                </div>
+              <div class="extra-option col-sm-3 col-xs-4">
+                  <div class="extra-icon deep-cleaning"></div>
+                  <center>
+                  <%= f.label(:inside_fridge) %>
+                  <%= f.check_box(:inside_fridge) %>
+                  </center>
+                </div>
+      
+              <div class="extra-option col-sm-3 col-xs-4">
+                  <div class="extra-icon deep-cleaning"></div>
+                  <center>
+                  <%= f.label(:inside_oven) %>
+                  <%= f.check_box(:inside_oven) %>
+                  </center>
+              </div>
+
+              <div class="extra-option col-sm-3 col-xs-4">
+                  <div class="extra-icon deep-cleaning"></div>
+                  <center>
+                  <%= f.label(:inside_windows) %>
+                  <%= f.check_box(:inside_windows) %>
+                  </center>
+              </div>
+              
+              <div class="extra-option col-sm-3 col-xs-4">
+                  <div class="extra-icon deep-cleaning"></div>
+                  <center>
+                  <%= f.label(:walls) %>
+                  <%= f.check_box(:walls) %>
+                  </center>
+              </div>
+
+              <div class="extra-option col-sm-3 col-xs-4">
+                  <div class="extra-icon deep-cleaning"></div>
+                  <center>
+                  <label>Moving </span></label>
+                  <%= f.check_box(:move_inout) %>
+                  </center>
+              </div>
+            </div>
           </p> 
 
 
@@ -146,7 +203,7 @@
                 <%= text_field_tag "card_code", '', options_hash.merge(:id => 'card_code', :class => 'required cardCode payment_input', :size => 5) %>
               </p>
            </div><br/>
-
+          <div id="finalprice"><p>Final Price: <strong>$0.00</strong></p></div>
           <%= f.submit "Place Appointment", class: 'continue' %>
           <p>*You'll be billed on the day of your appointment.  Cancel anytime.</p>
         <% end %>
@@ -155,7 +212,7 @@
   </div>
 </div>
 
-  <script>
+    <script>
     var preAdjustmentTotal = $('#apartment option:selected').val();
 
     $('#appointment_appointment_type').change(function() {
@@ -166,9 +223,22 @@
       calculate()
     });
 
+    $('.extra-option').change(function() {
+      calculate()
+    });
+
     function calculate() {
       var appointment_type = $('#appointment_appointment_type option:selected').val();
       var frequency = $('.radio-buttons :checked').val()
+      var multiple
+      var deep_clean
+      var inside_fridge
+      var inside_oven
+      var inside_windows
+      var walls
+      var move
+      var discounted_amount
+      var total
 
       if (frequency === 'onetime') {
         multiple = 1
@@ -177,20 +247,37 @@
       } else if (frequency === 'biweekly') {
         multiple = 0.85
       } else if (frequency === 'weekly') {
-        multiple = 0.8 }
+        multiple = 0.8 };
 
-      var discounted_amount = appointment_type * multiple 
-      var discounted_amount = Math.floor(discounted_amount*100)/100
+      
+      deep_clean = $('#appointment_deep_clean').is(':checked') ? 60 : 0;
+      inside_fridge = $('#appointment_inside_fridge').is(':checked') ? 25 : 0;
+      inside_oven = $('#appointment_inside_oven').is(':checked') ? 25 : 0; 
+      inside_windows = $('#appointment_inside_windows').is(':checked') ? 25 : 0;
+      walls = $('#appointment_walls').is(':checked') ? 25 : 0;
+      move = $('#appointment_move_inout').is(':checked') ? 60 : 0;
+
+      total = parseFloat(appointment_type) + deep_clean + inside_fridge + inside_oven + inside_windows + walls + move
+
+      discounted_amount = total * multiple 
+      
+      discounted_amount = Math.floor(discounted_amount*100)/100
+      
+
 
       $('#var_total').val(discounted_amount);
 
       $(".payment-table").find("tr").remove();
 
-      
-        $('<tr><td><p>Subtotal</p></td><td><p>$' + discounted_amount + '</p></tr><tr><td ><p><strong>Total</strong></p></td><td><p><strong>$' + discounted_amount +'</strong></p></td></tr>').appendTo('.payment-table');
-      };
-  </script>
+      $("#finalprice").find("p").remove();
 
+      
+      $('<tr><td><p>Subtotal</p></td><td><p>$' + discounted_amount + '</p></tr><tr><td ><p><strong>Total</strong></p></td><td><p><strong>$' + discounted_amount +'</strong></p></td></tr>').appendTo('.payment-table');
+
+      $('<p>Final Price: <strong>$' + discounted_amount + '</strong></p>').appendTo('#finalprice');
+
+      };
+      </script>
 
 
     <script>stripePaymentMethod = $('#billing')</script>

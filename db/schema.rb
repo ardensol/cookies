@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150804032739) do
+ActiveRecord::Schema.define(version: 20150811215810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(version: 20150804032739) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "appointment_type"
+    t.boolean  "deep_clean"
+    t.boolean  "inside_fridge"
+    t.boolean  "inside_oven"
+    t.boolean  "inside_windows"
+    t.boolean  "inside_cabinets"
+    t.boolean  "walls"
+    t.boolean  "move_inout"
   end
 
 end
