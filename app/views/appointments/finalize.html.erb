@@ -95,49 +95,60 @@
               <div class="row">
                 <div class="extra-option col-sm-3 col-xs-4">
                   <div class="extra-icon deep-cleaning"></div>
-                  <center>
-                  <%= f.label(:deep_clean) %>
-                  <%= f.check_box(:deep_clean) %>
-                  </center>
+                  
+                    <div class="extras">
+                      <%= f.label(:deep_clean) %>
+                      <%= f.check_box(:deep_clean) %>
+                    </div>
+                  
                 </div>
               <div class="extra-option col-sm-3 col-xs-4">
                   <div class="extra-icon deep-cleaning"></div>
-                  <center>
-                  <%= f.label(:inside_fridge) %>
-                  <%= f.check_box(:inside_fridge) %>
-                  </center>
+                  
+                    <div class="extras">
+                      <%= f.label(:inside_fridge) %>
+                      <%= f.check_box(:inside_fridge) %>
+                    </div>
+                  
                 </div>
       
               <div class="extra-option col-sm-3 col-xs-4">
                   <div class="extra-icon deep-cleaning"></div>
-                  <center>
-                  <%= f.label(:inside_oven) %>
-                  <%= f.check_box(:inside_oven) %>
-                  </center>
+                  
+                    <div class="extras">
+                      <%= f.label(:inside_oven) %>
+                      <%= f.check_box(:inside_oven) %>
+                    </div>
+                  
               </div>
 
               <div class="extra-option col-sm-3 col-xs-4">
                   <div class="extra-icon deep-cleaning"></div>
-                  <center>
-                  <%= f.label(:inside_windows) %>
-                  <%= f.check_box(:inside_windows) %>
-                  </center>
+                  
+                    <div class="extras">
+                      <%= f.label(:inside_windows) %>
+                      <%= f.check_box(:inside_windows) %>
+                    </div>
+                  
               </div>
               
               <div class="extra-option col-sm-3 col-xs-4">
                   <div class="extra-icon deep-cleaning"></div>
-                  <center>
-                  <%= f.label(:walls) %>
-                  <%= f.check_box(:walls) %>
-                  </center>
+                  
+                    <div class="extras">
+                      <%= f.label(:walls) %>
+                      <%= f.check_box(:walls) %>
+                    </div>
+                  
               </div>
 
               <div class="extra-option col-sm-3 col-xs-4">
                   <div class="extra-icon deep-cleaning"></div>
-                  <center>
-                  <label>Moving </span></label>
-                  <%= f.check_box(:move_inout) %>
-                  </center>
+                  
+                  <div class="extras">
+                    <%= f.label(:move_inout, "Move") %>
+                    <%= f.check_box(:move_inout) %>
+                  </div>
               </div>
             </div>
           </p> 
@@ -213,6 +224,7 @@
 </div><br/>
 
     <script>
+
     var preAdjustmentTotal = $('#apartment option:selected').val();
 
     $('#appointment_appointment_type').change(function() {
@@ -261,9 +273,12 @@
 
       discounted_amount = total * multiple 
       
-      discounted_amount = Math.floor(discounted_amount*100)/100
-      
-
+      discounted_amount = Math.floor(discounted_amount*100)/100;
+          
+      $(':checkbox').each(function(index) {  
+        $(this).parent().removeClass('selected');
+        if ($(this).is(':checked')) { $(this).parent().addClass('selected')};
+        ;});
 
       $('#var_total').val(discounted_amount);
 
