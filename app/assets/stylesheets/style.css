@@ -1163,3 +1163,10 @@ li {
 .top-50 {
   padding-top: 50px;
 }
+
+.address {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: 'proxima_nova_rgregular';
+}
