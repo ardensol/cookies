@@ -13,4 +13,7 @@ class PagesController < ApplicationController
 	def termsofservice
 	end
 
+	def about
+	end
+
 end
