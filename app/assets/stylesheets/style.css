@@ -22,6 +22,10 @@ a:hover {
 a {
   color: black;
 }
+
+a:visited {
+  color: none;
+}
 /* ALL */
 
 .no-margin {
@@ -431,6 +435,7 @@ li {
   margin-top: 50px;
   margin-bottom: 50px;
   background-color: #f2f2f2;
+  font-size: 18px;
 }
 
 .homeBanner {
@@ -1169,4 +1174,30 @@ li {
   font-size: 14px;
   letter-spacing: 1px;
   font-family: 'proxima_nova_rgregular';
+}
+
+/* SEO PAGE Formatting */
+
+.form-padding {
+  padding: 50px;
+}
+
+.article_section {
+  background-color: #f2f2f2;
+}
+
+.article_section h3 {
+  color: #352f2d;
+  font-family: "Open Sans", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0px auto 30px;
+  text-transform: uppercase;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.article-image {
+  float:left; 
+  padding: 0px 20px 20px 10px;
 }

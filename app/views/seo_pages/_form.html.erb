@@ -1,0 +1,51 @@
+<div class="form-padding">  
+  <%= form_for(@seo_page) do |f| %>
+    <% if @seo_page.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@seo_page.errors.count, "error") %> prohibited this seo_page from being saved:</h2>
+
+        <ul>
+        <% @seo_page.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :h1_text %><br>
+      <%= f.text_field :h1_text %>
+    </div>
+    <div class="field">
+      <%= f.label :h2_text %><br>
+      <%= f.text_field :h2_text %>
+    </div>
+    <div class="field">
+      <%= f.label :og_description %><br>
+      <%= f.text_field :og_description %>
+    </div>
+    <div class="field">
+      <%= f.label :image_tag %><br>
+      <%= f.text_field :image_tag %>
+    </div>
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :article_header %><br>
+      <%= f.text_field :article_header %>
+    </div>
+    <div class="field">
+      <%= f.label :paragraph_text %><br>
+      <%= f.text_area :paragraph_text, rows: 20 %>
+    </div>
+    <div class="field">
+      <%= f.label :article_image %><br>
+      <%= f.file_field :article_image %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

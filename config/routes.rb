@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
+
 
   root 'pages#home'
 
@@ -13,6 +17,13 @@ Rails.application.routes.draw do
   get '/privacy', to: 'pages#privacy'
   get '/terms-of-service', to: 'pages#termsofservice'
   get '/about', to: 'pages#about'
+
+  ##Some Mother Fucking SEO
+
+  resources :seo_pages
+
+  get ':id', to: 'seo_pages#show', as: 'seo_show'
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

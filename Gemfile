@@ -27,6 +27,16 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'rails_12factor', group: :production
 
+##Pics
+
+gem 'paperclip'
+gem 'aws-sdk', '< 2.0'
+
+
+## SEO STUFF 
+
+gem 'friendly_id'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
