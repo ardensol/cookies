@@ -11,7 +11,7 @@ class SeoPagesController < ApplicationController
   # GET /seo_pages/1.json
   def show
     @appointment = Appointment.new
-    @title = "#{@seo_page.name} - Maid Fox"    
+    @title = "#{@seo_page.name}.  Professional Cleaners in Arizona. - Maid Fox"    
   end
 
   # GET /seo_pages/new
