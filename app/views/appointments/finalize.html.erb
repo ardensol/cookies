@@ -9,36 +9,36 @@
     <div class="checkout_block">
       <div class="sidebar_checkout">
       	<div class="sidebar_checkout-payment" style="padding: 10px">
-	        <h2 style="padding: 0px; font-size: 18px">Booking Summary</h2>
+	        <h2 style="padding: 0px; font-size: 18px">Order Summary</h2>
 	        <table class="payment-table">
 	          <tr id="subtotal" >
 	            <td >
 	              <p >Subtotal</p>
 	            </td>
-	            <td><p id="subtotal">$119</p></td>
+	            <td><p id="subtotal">$10.60</p></td>
 	          </tr>
 
 	          
 	          <tr>
 	            
 	            <td ><p><strong>Total</strong></p></td>
-	            <td><p id="total"><strong>$119</strong></p></td>
+	            <td><p id="total"><strong>$10.60</strong></p></td>
 	          </tr>
 	        </table>
         </div>
         <br/>
        	<div class="faq hidden-sm hidden-md hidden-xs">
        		<h2 class="faq-h2">About Us</h2>
-       			<p class="faq-text">Friendly Service</p>
-            <p class="faq-subtext">Fast and friendly customer service. We will get back to your emails and phone calls within an hour during normal business timings.</p>
-            <p class="faq-text">We Provide Supplies</p>              
-            <p class="faq-subtext">No vacuum? Ran out of windex? No problem! Our cleaners provide cleaning equipment and supplies</p>
+       			<p class="faq-text">Delicious Cookies</p>
+            <p class="faq-subtext">We took our families 50 years of baking experience and infused it into the best cookie possible!</p>
+            <p class="faq-text">Quick Delivery</p>              
+            <p class="faq-subtext">Not only delicious, but convenient!  Get Warm Cookies Delivered Straight to your Home!</p>
             <p class="faq-text">Safe Shopping</p>
             <p class="faq-subtext">Industry leading 256-bit SSL encryption. Our security practices are monitored and verified</p>
             <p class="faq-text">Insured</p>
-            <p class="faq-subtext">You are in good hands with our Super Maids. Rest assured that we are fully insured.</p>
+            <p class="faq-subtext">You are in good hands with our Cookie Devils!</p>
             <p class="faq-text">5 Star Customer Rated</p>
-            <p class="faq-subtext">Arizona’s top rated cleaning service for a reason!</p>
+            <p class="faq-subtext">Arizona’s top rated cookie delivery service for a reason!</p>
        		</ul>
 
        	</div> 
@@ -46,7 +46,7 @@
       <div class="main_content_checkout">
         <%= form_for @appointment do |f| %>
 
-          <h2 style="padding: 0px; font-size: 30px">Complete Your Booking</h2>
+          <h2 style="padding: 0px; font-size: 30px">Complete Your Order</h2>
             
             <%= f.hidden_field( :amount, class: "payment_input width-3", id: "var_total" )%>
           <p class="field" %>
@@ -54,15 +54,11 @@
               <%= f.text_field( :email, class: "payment_input width-3" )%>
           </p>
           
-          <p class="field" %>
-            <label class="payment_label">Appointment Date</label>
-            <%= f.date_field( :appointment_date, class: "payment_input width-3", id: "date" )%>
-          </p> 
           <div class="section-line"></div>
-          <h2>Choose Your Service</h2>
+          <h2>Choose Your Cookies!</h2>
           <p class="field" %>
-            <label class="payment_label">Tell us About Your Home</label></p> 
-            <%= f.select( :appointment_type, options_for_select([["Studio: $119", 119], ["One Bedroom: $129", 129], ["Two Bedroom: $139", 139], ["Three Bedroom: $159", 159],["Four Bedroom: $189", 189], ["Five Bedroom: $219", 219], ["Six Bedroom: $249", 249]]),class: "payment_input width-3 select_option", id: "apartment" )%>
+            <label class="payment_label">How Many Cookies Would You Like?</label></p> 
+            <%= f.select( :appointment_type, options_for_select([["6 Cookies", 119], ["Dozen Cookies", 129], ["Team Pack - 24", 139], ["Feed The Dorm - 48", 159]]),class: "payment_input width-3 select_option", id: "apartment" )%>
           
 
           <div class="section-line"></div>
@@ -72,18 +68,18 @@
             <div class="container-fluid">
               <div class="radio-buttons">
                 <%= f.radio_button( :appointment_frequency, "onetime", checked: true)%>
-                <%= f.label( :appointment_frequency_onetime, "One Time")%>
+                <%= f.label( :appointment_frequency_onetime, "Milk")%>
 
 
                 <%= f.radio_button( :appointment_frequency, "monthly")%>
-                <%= f.label( :appointment_frequency_monthly, "Monthly")%>
+                <%= f.label( :appointment_frequency_monthly, "Brownies")%>
                 
 
                 <%= f.radio_button( :appointment_frequency, "biweekly")%>
-                <%= f.label( :appointment_frequency_biweekly, "Bi-Weekly")%>
+                <%= f.label( :appointment_frequency_biweekly, "Chocolate Milk")%>
 
                 <%= f.radio_button( :appointment_frequency, "weekly")%>
-                <%= f.label( :appointment_frequency_weekly, "Weekly")%>
+                <%= f.label( :appointment_frequency_weekly, "BigWich")%>
                 
               </div>
             </div>
@@ -97,7 +93,7 @@
                   <div class="extra-icon deep-cleaning"></div>
                   
                     <div class="extras">
-                      <%= f.label(:deep_clean) %>
+                      <%= f.label(:deep_clean, "Chocolate") %>
                       <%= f.check_box(:deep_clean) %>
                     </div>
                   
@@ -106,50 +102,11 @@
                   <div class="extra-icon deep-cleaning"></div>
                   
                     <div class="extras">
-                      <%= f.label(:inside_fridge) %>
+                      <%= f.label(:inside_fridge, "Vanilla") %>
                       <%= f.check_box(:inside_fridge) %>
                     </div>
                   
                 </div>
-      
-              <div class="extra-option col-sm-3 col-xs-4">
-                  <div class="extra-icon deep-cleaning"></div>
-                  
-                    <div class="extras">
-                      <%= f.label(:inside_oven) %>
-                      <%= f.check_box(:inside_oven) %>
-                    </div>
-                  
-              </div>
-
-              <div class="extra-option col-sm-3 col-xs-4">
-                  <div class="extra-icon deep-cleaning"></div>
-                  
-                    <div class="extras">
-                      <%= f.label(:inside_windows) %>
-                      <%= f.check_box(:inside_windows) %>
-                    </div>
-                  
-              </div>
-              
-              <div class="extra-option col-sm-3 col-xs-4">
-                  <div class="extra-icon deep-cleaning"></div>
-                  
-                    <div class="extras">
-                      <%= f.label(:walls) %>
-                      <%= f.check_box(:walls) %>
-                    </div>
-                  
-              </div>
-
-              <div class="extra-option col-sm-3 col-xs-4">
-                  <div class="extra-icon deep-cleaning"></div>
-                  
-                  <div class="extras">
-                    <%= f.label(:move_inout, "Move") %>
-                    <%= f.check_box(:move_inout) %>
-                  </div>
-              </div>
             </div>
           </p> 
 
@@ -215,8 +172,7 @@
               </p>
            </div><br/>
           <div id="finalprice"><p>Final Price: <strong>$0.00</strong></p></div>
-          <%= f.submit "Place Appointment", class: 'continue' %>
-          <p>*You'll be billed on the day of your appointment.  Cancel anytime.</p>
+          <%= f.submit "Get Cookies", class: 'continue' %>
         <% end %>
       </div>
     </div>

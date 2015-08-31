@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :charges
   resources :appointments
 
-  get '/appointments/:id/finalize', to: 'appointments#finalize', as: 'finalize'
+  get '/orders/:id/finalize', to: 'appointments#finalize', as: 'finalize'
   get '/confirmation', to: 'pages#confirmation'
   get '/privacy', to: 'pages#privacy'
   get '/terms-of-service', to: 'pages#termsofservice'

@@ -1,4 +1,5 @@
 class Appointment < ActiveRecord::Base
+  validates :zip, inclusion: { in: %w(85281 85282 85202) }
 
   attr_accessor :card_token, :amount, :appointment_frequency
 
